@@ -18,6 +18,7 @@ fetch(`http://localhost:9001/api/planets/${id}`)
     planetDiv.innerHTML += `<p>Orbital Period: ${planet.orbital_period} days</p>`; 
 
 
+
   })
   .catch(error => {
     console.error('Error fetching data:', error);
