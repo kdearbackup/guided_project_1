@@ -10,7 +10,14 @@ fetch(`http://localhost:9001/api/planets/${id}`)
   .then(planet => {
     // Process the data received from the server
     console.log(planet);
-    planetDiv.innerHTML += `<p>${planet.name}</p>`; 
+    planetDiv.innerHTML += `<p>Name: ${planet.name}</p>`; 
+    planetDiv.innerHTML += `<p>Climate: ${planet.climate}</p>`; 
+    planetDiv.innerHTML += `<p>Diameter: ${planet.diameter} miles</p>`; 
+    planetDiv.innerHTML += `<p>Population: ${planet.population} people</p>`; 
+    planetDiv.innerHTML += `<p>Terrain: ${planet.terrain}</p>`; 
+    planetDiv.innerHTML += `<p>Orbital Period: ${planet.orbital_period} days</p>`; 
+
+
   })
   .catch(error => {
     console.error('Error fetching data:', error);
